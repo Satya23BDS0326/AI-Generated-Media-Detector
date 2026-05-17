@@ -370,3 +370,292 @@ body {
     rgba(245,166,35,0.07) 0%, transparent 70%) !important;
 }
 .result-warn .result-heading { color: #f5a623 !important; }
+/* ───────── EXPLAINABLE AI ───────── */
+
+.explain-box{
+    margin-top:25px;
+    background:#0d1729;
+    border:1px solid #1a2f50;
+    border-radius:18px;
+    padding:24px;
+    text-align:left;
+}
+
+.explain-title{
+    color:#00c8ff;
+    margin-bottom:14px;
+    font-family:'Orbitron';
+    font-size:16px;
+    letter-spacing:0.08em;
+}
+
+.explain-list{
+    padding-left:20px;
+    line-height:2;
+    color:#c8d8f0;
+}
+
+/* ───────── TABLE ───────── */
+
+.table-box{
+    margin-top:25px;
+    overflow-x:auto;
+}
+
+.table-title{
+    color:#00c8ff;
+    margin-bottom:16px;
+    font-family:'Orbitron';
+    font-size:16px;
+    letter-spacing:0.08em;
+}
+
+.detector-table{
+    width:100%;
+    border-collapse:collapse;
+    background:#0d1729;
+    border-radius:18px;
+    overflow:hidden;
+}
+
+.detector-table th{
+    background:#111827;
+    color:#00c8ff;
+    padding:14px;
+    font-family:'Orbitron';
+    font-size:12px;
+    letter-spacing:0.08em;
+}
+
+.detector-table td{
+    padding:14px;
+    border-top:1px solid #1a2f50;
+    text-align:center;
+    color:#dbeafe;
+}
+
+.detector-table tr:hover{
+    background:#111827;
+}
+
+/* ── DRAG & DROP STATES ───────────────────── */
+.upload-card.drag-over {
+  border-color: var(--accent) !important;
+  background: rgba(0,200,255,0.08) !important;
+  box-shadow: 0 0 60px rgba(0,200,255,0.2) !important;
+  transform: scale(1.01);
+  transition: all 0.2s ease;
+}
+
+.upload-card.drop-success {
+  border-color: var(--safe) !important;
+  background: rgba(0,255,178,0.08) !important;
+  box-shadow: 0 0 40px rgba(0,255,178,0.2) !important;
+}
+
+.empty-hint {
+  font-size: 12px;
+  color: var(--text-dim);
+  margin-top: 6px;
+  letter-spacing: 0.08em;
+}
+
+/* ── LOADING SPINNER ──────────────────────── */
+.spinner-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  animation: fadeUp 0.4s ease;
+}
+
+.spinner-card {
+  background: var(--bg2);
+  border: 1px solid rgba(0,200,255,0.2);
+  border-radius: 24px;
+  padding: 48px 60px;
+  text-align: center;
+  box-shadow: 0 0 40px rgba(0,200,255,0.08);
+  width: 100%;
+  max-width: 500px;
+}
+
+.spinner-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+}
+
+.spinner-ring {
+  width: 80px;
+  height: 80px;
+  border: 6px solid rgba(0,200,255,0.15);
+  border-top: 6px solid var(--accent);
+  border-right: 6px solid var(--accent2);
+  border-radius: 50%;
+  animation: spin-ring 1s linear infinite;
+}
+
+@keyframes spin-ring {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.spinner-text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+
+.spinner-title {
+  font-family: var(--font-head);
+  font-size: 14px;
+  letter-spacing: 0.25em;
+  color: var(--accent);
+  animation: pulse-text 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse-text {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.5; }
+}
+
+.spinner-sub {
+  font-size: 13px;
+  color: var(--text-dim);
+  letter-spacing: 0.06em;
+}
+
+.spinner-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.step {
+  font-family: var(--font-head);
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  color: var(--text-dim);
+  padding: 4px 14px;
+  border: 1px solid rgba(0,200,255,0.15);
+  border-radius: 100px;
+  animation: step-glow 2s ease-in-out infinite;
+}
+
+.step:nth-child(2) { animation-delay: 0.3s; }
+.step:nth-child(3) { animation-delay: 0.6s; }
+
+@keyframes step-glow {
+  0%, 100% { border-color: rgba(0,200,255,0.15); color: var(--text-dim); }
+  50%       { border-color: var(--accent); color: var(--accent); }
+}
+
+/* ── EXPLAINABLE AI BOX ───────────────────── */
+.explain-box {
+  margin-top: 24px;
+  background: rgba(0,200,255,0.04);
+  border: 1px solid rgba(0,200,255,0.12);
+  border-radius: 14px;
+  padding: 20px 24px;
+  text-align: left;
+}
+
+.explain-title {
+  font-family: var(--font-head);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.explain-list {
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.explain-list li {
+  font-size: 13px;
+  color: var(--text);
+  line-height: 1.5;
+}
+
+/* ── DETECTOR TABLE ───────────────────────── */
+.table-box {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.table-title {
+  font-family: var(--font-head);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.detector-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.detector-table th {
+  font-family: var(--font-head);
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  color: var(--text-dim);
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+}
+
+.detector-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  color: var(--text);
+}
+
+.detector-table tr:last-child td { border-bottom: none; }
+.detector-table tr:hover td { background: rgba(0,200,255,0.03); }
+
+/* ── WARN STATE ───────────────────────────── */
+.arc-warn {
+  stroke: #f5a623;
+  filter: drop-shadow(0 0 10px #f5a623);
+}
+
+.result-warn { border-color: rgba(245,166,35,0.5) !important; }
+.result-warn::before {
+  background: radial-gradient(ellipse 60% 40% at 50% 0%,
+    rgba(245,166,35,0.07) 0%, transparent 70%) !important;
+}
+.result-warn .result-heading { color: #f5a623 !important; }
+
+/* ── ACCURACY NOTE ────────────────────────── */
+.accuracy-wrap {
+  margin-top: 20px;
+  padding: 12px 16px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.accuracy-note {
+  font-size: 11px;
+  color: var(--text-dim);
+  letter-spacing: 0.05em;
+  line-height: 1.6;
+}
+
+/* ── FOOTER NOTE ──────────────────────────── */
+.footer-note {
+  font-size: 11px;
+  color: rgba(255,255,255,0.2);
+  margin-top: 4px;
+}
