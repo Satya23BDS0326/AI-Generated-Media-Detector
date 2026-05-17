@@ -13,14 +13,16 @@ built entirely in Python.
 ## 📸 Screenshots
 
 ### 🔴 AI Detected
-![AI Detected](screenshots/ai-detected.png)
+![AI Detected](screenshots/ai-generated-result.png)
 
 ### 🟡 Inconclusive
-![Inconclusive](screenshots/inconclusive.png)
+![Inconclusive](screenshots/inconclusive-result.png)
 
 ### ✅ Authentic
-![Authentic](screenshots/authentic.png)
+![Authentic](screenshots/authentic-result.png)
 
+### 🎨 Full Dashboard
+![Dashboard](screenshots/dashboard.png)
 ---
 
 ## 💡 What Does It Do?
